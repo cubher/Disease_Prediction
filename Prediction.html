@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Prediction</title>
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link rel="stylesheet" href="Prediction.css" media="screen">
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <meta name="generator" content="Nicepage 5.7.9, nicepage.com">
+  <meta name="referrer" content="origin">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/17ddb4bf9b8a632482ef7fee488ba52cf05975429ace8c47a11b5028d5c27d58cdafa5ecf718fe9cca831f6b0c67c315969b0c0febfe0a850588c9_1280.png"
+}</script>
+  <script src="./decision-tree.js"></script>
+  <meta name="theme-color" content="#ff724a">
+  <meta property="og:title" content="Prediction">
+  <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+
+<body class="u-body u-xl-mode" data-lang="en">
+  <header class="u-clearfix u-header u-header" id="sec-6b2a">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <a href="#" class="u-image u-logo u-image-1" data-image-width="1280" data-image-height="1280">
+        <img
+          src="images/17ddb4bf9b8a632482ef7fee488ba52cf05975429ace8c47a11b5028d5c27d58cdafa5ecf718fe9cca831f6b0c67c315969b0c0febfe0a850588c9_1280.png"
+          class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" data-responsive-from="MD">
+        <div class="menu-collapse"
+          style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+          <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg class="u-svg-link" viewBox="0 0 24 24">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect y="1" width="16" height="2"></rect>
+                <rect y="7" width="16" height="2"></rect>
+                <rect y="13" width="16" height="2"></rect>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-nav u-spacing-30 u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+                href="index.html" style="padding: 10px 0px;">Home</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+                href="Prediction.html" style="padding: 10px 0px;">Prediction</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+                href="Prevention.html" style="padding: 10px 0px;">Prevention</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+                href="ChatBot.html" style="padding: 10px 0px;">ChatBot</a>
+            </li>
+          </ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html">Home</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Prediction.html">Prediction</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Prevention.html">Prevention</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="ChatBot.html">ChatBot</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="u-clearfix u-section-1" id="sec-c9c0">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <script>
+        function addFields() {
+          var number = document.getElementById("name-2e9c").value;
+          console.log(number)
+          var container = document.getElementById("container");
+          var s = "";
+          for (i = 0; i < number; i++) {
+            s = s + `<div class="u-form-group u-form-select u-form-group-3">
+              <label for="select-dde8" class="u-label">Select symtom 1</label>
+              <div class="u-form-select-wrapper">
+                <select id="s`+i.toString()+`" name="select" class="u-input u-input-rectangle">
+                  <option value="abdominal_pain">abdominal pain</option>
+                    <option value="abnormal_menstruation">abnormal menstruation</option>
+                    <option value="acidity">acidity</option>
+                    <option value="acute_liver_failure">acute liver failure</option>
+                    <option value="altered_sensorium">altered sensorium</option>
+                    <option value="anxiety">anxiety</option>
+                    <option value="back_pain">back pain</option>
+                    <option value="belly_pain">belly pain</option>
+                    <option value="blackheads">blackheads</option>
+                    <option value="bladder_discomfort">bladder discomfort</option>
+                    <option value="blister">blister</option>
+                    <option value="blood_in_sputum">blood in sputum</option>
+                    <option value="bloody_stool">bloody stool</option>
+                    <option value="blurred_and_distorted_vision">blurred and distorted vision</option>
+                    <option value="breathlessness">breathlessness</option>
+                    <option value="brittle_nails">brittle nails</option>
+                    <option value="bruising">bruising</option>
+                    <option value="burning_micturition">burning micturition</option>
+                    <option value="chest_pain">chest pain</option>
+                    <option value="chills">chills</option>
+                    <option value="cold_hands_and_feets">cold hands and feets</option>
+                    <option value="coma">coma</option>
+                    <option value="congestion">congestion</option>
+                    <option value="constipation">constipation</option>
+                    <option value="continuous_feel_of_urine">continuous feel of urine</option>
+                    <option value="continuous_sneezing">continuous sneezing</option>
+                    <option value="cough">cough</option>
+                    <option value="cramps">cramps</option>
+                    <option value="dark_urine">dark urine</option>
+                    <option value="dehydration">dehydration</option>
+                    <option value="depression">depression</option>
+                    <option value="diarrhoea">diarrhoea</option>
+                    <option value="dischromic_patches">dischromic patches</option>
+                    <option value="distention_of_abdomen">distention of abdomen</option>
+                    <option value="dizziness">dizziness</option>
+                    <option value="drying_and_tingling_lips">drying and tingling lips</option>
+                    <option value="enlarged_thyroid">enlarged thyroid</option>
+                    <option value="excessive_hunger">excessive hunger</option>
+                    <option value="extra_marital_contacts">extra marital contacts</option>
+                    <option value="family_history">family history</option>
+                    <option value="fast_heart_rate">fast heart rate</option>
+                    <option value="fatigue">fatigue</option>
+                    <option value="fluid_overload">fluid overload</option>
+                    <option value="fluid_overload">fluid overload</option>
+                    <option value="foul_smell_of_urine">foul smell of urine</option>
+                    <option value="headache">headache</option>
+                    <option value="high_fever">high fever</option>
+                    <option value="hip_joint_pain">hip joint pain</option>
+                    <option value="history_of_alcohol_consumption">history of alcohol consumption</option>
+                    <option value="increased_appetite">increased appetite</option>
+                    <option value="indigestion">indigestion</option>
+                    <option value="inflammatory_nails">inflammatory nails</option>
+                    <option value="internal_itching">internal itching</option>
+                    <option value="irregular_sugar_level">irregular sugar level</option>
+                    <option value="irritability">irritability</option>
+                    <option value="irritation_in_anus">irritation in anus</option>
+                    <option value="itching">itching</option>
+                    <option value="joint_pain">joint pain</option>
+                    <option value="knee_pain">knee pain</option>
+                    <option value="lack_of_concentration">lack of concentration</option>
+                    <option value="lethargy">lethargy</option>
+                    <option value="loss_of_appetite">loss of appetite</option>
+                    <option value="loss_of_balance">loss of balance</option>
+                    <option value="loss_of_smell">loss of smell</option>
+                    <option value="malaise">malaise</option>
+                    <option value="mild_fever">mild fever</option>
+                    <option value="mood_swings">mood swings</option>
+                    <option value="movement_stiffness">movement stiffness</option>
+                    <option value="mucoid_sputum">mucoid sputum</option>
+                    <option value="muscle_pain">muscle pain</option>
+                    <option value="muscle_wasting">muscle wasting</option>
+                    <option value="muscle_weakness">muscle weakness</option>
+                    <option value="nausea">nausea</option>
+                    <option value="neck_pain">neck pain</option>
+                    <option value="nodal_skin_eruptions">nodal skin eruptions</option>
+                    <option value="obesity">obesity</option>
+                    <option value="pain_behind_the_eyes">pain behind the eyes</option>
+                    <option value="pain_during_bowel_movements">pain during bowel movements</option>
+                    <option value="pain_in_anal_region">pain in anal region</option>
+                    <option value="painful_walking">painful walking</option>
+                    <option value="palpitations">palpitations</option>
+                    <option value="passage_of_gases">passage of gases</option>
+                    <option value="patches_in_throat">patches in throat</option>
+                    <option value="phlegm">phlegm</option>
+                    <option value="polyuria">polyuria</option>
+                    <option value="prominent_veins_on_calf">prominent veins on calf</option>
+                    <option value="puffy_face_and_eyes">puffy face and eyes</option>
+                    <option value="pus_filled_pimples">pus filled pimples</option>
+                    <option value="receiving_blood_transfusion">receiving blood transfusion</option>
+                    <option value="receiving_unsterile_injections">receiving unsterile injections</option>
+                    <option value="red_sore_around_nose">red sore around nose</option>
+                    <option value="red_spots_over_body">red spots over body</option>
+                    <option value="redness_of_eyes">redness of eyes</option>
+                    <option value="restlessness">restlessness</option>
+                    <option value="runny_nose">runny nose</option>
+                    <option value="rusty_sputum">rusty sputum</option>
+                    <option value="scurring">scurring</option>
+                    <option value="shivering">shivering</option>
+                    <option value="silver_like_dusting">silver like dusting</option>
+                    <option value="sinus_pressure">sinus pressure</option>
+                    <option value="skin_peeling">skin peeling</option>
+                    <option value="skin_rash">skin rash</option>
+                    <option value="slurred_speech">slurred speech</option>
+                    <option value="small_dents_in_nails">small dents in nails</option>
+                    <option value="spinning_movements">spinning movements</option>
+                    <option value="spotting_urination">spotting urination</option>
+                    <option value="stiff_neck">stiff neck</option>
+                    <option value="stomach_bleeding">stomach bleeding</option>
+                    <option value="stomach_pain">stomach pain</option>
+                    <option value="sunken_eyes">sunken eyes</option>
+                    <option value="sweating">sweating</option>
+                    <option value="swelled_lymph_nodes">swelled lymph nodes</option>
+                    <option value="swelling_joints">swelling joints</option>
+                    <option value="swelling_of_stomach">swelling of stomach</option>
+                    <option value="swollen_blood_vessels">swollen blood vessels</option>
+                    <option value="swollen_extremeties">swollen extremeties</option>
+                    <option value="swollen_legs">swollen legs</option>
+                    <option value="throat_irritation">throat irritation</option>
+                    <option value="toxic_look_typhos">toxic look typhos</option>
+                    <option value="ulcers_on_tongue">ulcers on tongue</option>
+                    <option value="unsteadiness">unsteadiness</option>
+                    <option value="visual_disturbances">visual disturbances</option>
+                    <option value="vomiting">vomiting</option>
+                    <option value="watering_from_eyes">watering from eyes</option>
+                    <option value="weakness_in_limbs">weakness in limbs</option>
+                    <option value="weakness_of_one_body_side">weakness of one body side</option>
+                    <option value="weight_gain">weight gain</option>
+                    <option value="weight_loss">weight loss</option>
+                    <option value="yellow_crust_ooze">yellow crust ooze</option>
+                    <option value="yellow_urine">yellow urine</option>
+                    <option value="yellowing_of_eyes">yellowing of eyes</option>
+                    <option value="yellowish_skin">yellowish skin</option>
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
+                  viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve">
+                  <polygon class="st0" points="8,12 2,4 14,4 "></polygon>
+                </svg>
+              </div>
+            </div>`;
+          }
+          container.innerHTML = s;
+          var container2 = document.getElementById("container_2");
+          container2.innerHTML = ``;
+        }
+function pred(){
+  var comic = { itching :0, skin_rash :0, nodal_skin_eruptions :0, continuous_sneezing :0, shivering :0, chills :0, joint_pain :0, stomach_pain :0, acidity :0, ulcers_on_tongue :0, muscle_wasting :0, vomiting :0, burning_micturition :0, spotting_urination :0, fatigue :0, weight_gain :0, anxiety :0, cold_hands_and_feets :0, mood_swings :0, weight_loss :0, restlessness :0, lethargy :0, patches_in_throat :0, irregular_sugar_level :0, cough :0, high_fever :0, sunken_eyes :0, breathlessness :0, sweating :0, dehydration :0, indigestion :0, headache :0, yellowish_skin :0, dark_urine :0, nausea :0, loss_of_appetite :0, pain_behind_the_eyes :0, back_pain :0, constipation :0, abdominal_pain :0, diarrhoea :0, mild_fever :0, yellow_urine :0, yellowing_of_eyes :0, acute_liver_failure :0, fluid_overload :0, swelling_of_stomach :0, swelled_lymph_nodes :0, malaise :0, blurred_and_distorted_vision :0, phlegm :0, throat_irritation :0, redness_of_eyes :0, sinus_pressure :0, runny_nose :0, congestion :0, chest_pain :0, weakness_in_limbs :0, fast_heart_rate :0, pain_during_bowel_movements :0, pain_in_anal_region :0, bloody_stool :0, irritation_in_anus :0, neck_pain :0, dizziness :0, cramps :0, bruising :0, obesity :0, swollen_legs :0, swollen_blood_vessels :0, puffy_face_and_eyes :0, enlarged_thyroid :0, brittle_nails :0, swollen_extremeties :0, excessive_hunger :0, extra_marital_contacts :0, drying_and_tingling_lips :0, slurred_speech :0, knee_pain :0, hip_joint_pain :0, muscle_weakness :0, stiff_neck :0, swelling_joints :0, movement_stiffness :0, spinning_movements :0, loss_of_balance :0, unsteadiness :0, weakness_of_one_body_side :0, loss_of_smell :0, bladder_discomfort :0, foul_smell_of_urine :0, continuous_feel_of_urine :0, passage_of_gases :0, internal_itching :0, toxic_look_typhos :0, depression :0, irritability :0, muscle_pain :0, altered_sensorium :0, red_spots_over_body :0, belly_pain :0, abnormal_menstruation :0, dischromic_patches :0, watering_from_eyes :0, increased_appetite :0, polyuria :0, family_history :0, mucoid_sputum :0, rusty_sputum :0, lack_of_concentration :0, visual_disturbances :0, receiving_blood_transfusion :0, receiving_unsterile_injections :0, coma :0, stomach_bleeding :0, distention_of_abdomen :0, history_of_alcohol_consumption :0, fluid_overload :0, blood_in_sputum :0, prominent_veins_on_calf :0, palpitations :0, painful_walking :0, pus_filled_pimples :0, blackheads :0, scurring :0, skin_peeling :0, silver_like_dusting :0, small_dents_in_nails :0, inflammatory_nails :0, blister :0, red_sore_around_nose :0, yellow_crust_ooze :0,  };
+
+  var number = document.getElementById("name-2e9c").value;
+  for(var i=0;i<number;i++){
+    var e = document.getElementById("s"+i.toString());
+    var value = e.value;
+    comic[value] = 1;
+  }
+  var decisionTreePrediction = decisionTree.predict(comic);
+  console.log(decisionTreePrediction);
+  var container2 = document.getElementById("container_2");
+  container2.innerHTML = `Prediction: <h3>${decisionTreePrediction}</h3>`;
+}
+      </script>
+      <a onclick="addFields()"
+        class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">go</a>
+      <div class="u-form u-form-1">
+        <form 
+          class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
+          style="padding: 10px;">
+
+          <div class="u-form-group u-form-name">
+            <label for="name-2e9c" class="u-label">Enter no of symptoms</label>
+            <input type="number" id="name-2e9c" name="name"
+              class="u-input u-input-rectangle" required="">
+          </div>
+          <div id="container">
+          </div>
+          <div class="u-align-left u-form-group u-form-submit">
+            <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
+            <input type="submit" value="submit" class="u-form-control-hidden" onclick="pred()">
+          </div>
+          <div id="container_2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b583">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1">©&nbsp;2023 ​Disease Reccomender System&nbsp;&nbsp;All
+        rights reserved | Design &amp; Developed by&nbsp;Abhishek N N<br>
+        <a href="https://vit.ac.in/all-courses/ug" target="_blank"
+          class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"></a>
+      </p>
+    </div>
+  </footer>
+  <section class="u-backlink u-clearfix u-grey-80">
+    <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+      <span>Website Templates</span>
+    </a>
+    <p class="u-text">
+      <span>created with</span>
+    </p>
+    <a class="u-link" href="" target="_blank">
+      <span>Website Builder Software</span>
+    </a>.
+  </section>
+
+</body>
+
+</html>
